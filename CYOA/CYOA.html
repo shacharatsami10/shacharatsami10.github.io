@@ -6,25 +6,22 @@
     <link rel="stylesheet" href="styles.css">
     <title>Fantasy Forest</title>
 
-    <style>
-        body {
 
-            h1 {
-                font-size: 70px;
-                color: rgb(144, 255, 194);
-                margin-left: 0%;
-                -webkit-text-stroke: 2px black;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    </style>
 </head>
 
 
 <body>
-    <h1> Welcome to Fantasy Forest</h1>
-    <!-- Content goes here -->
+
+    <div id="audio-player">
+        <audio id="background-audio" controls autoplay loop>
+            <source src="/CYOA/Sounds/BackgroundMusicShort.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="overlay-containerTop">
+        <h1>Fantasy Forest</h1>
+    </div>
+
 
     <div class="overlay-container1" id="=Gate1">
         <a href="./Gates/Gate1.html">
@@ -51,6 +48,36 @@
     </div>
 
 
+
+
+    <script>
+        // Retrieve the audio player and audio element
+        const audioPlayer = document.getElementById('audio-player');
+        const backgroundAudio = document.getElementById('background-audio');
+
+        // Check if the audio is playing or not in local storage
+        const isAudioPlaying = localStorage.getItem('isAudioPlaying') === 'true';
+
+        // Set the initial state of the audio player
+        if (isAudioPlaying) {
+            audioPlayer.style.display = 'block';
+        } else {
+            audioPlayer.style.display = 'none';
+        }
+
+        // Toggle the audio player on button click
+        function toggleAudioPlayer() {
+            if (audioPlayer.style.display === 'none') {
+                audioPlayer.style.display = 'block';
+                backgroundAudio.play();
+                localStorage.setItem('isAudioPlaying', 'true');
+            } else {
+                audioPlayer.style.display = 'none';
+                backgroundAudio.pause();
+                localStorage.setItem('isAudioPlaying', 'false');
+            }
+        }
+    </script>
 
 </body>
 
