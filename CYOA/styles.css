@@ -67,9 +67,11 @@ body {
 
     }
 
-    audio {
-        display: none;
+    #audio-player {
+        position: relative;
+        top: 850px;
     }
+
 
 
 }
