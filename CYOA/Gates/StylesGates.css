@@ -33,6 +33,10 @@ body {
 
     #inventory h2 {
         margin-bottom: 5px;
+        color: #00ff80;
+        -webkit-text-stroke: 1px black;
+        font-size: 40px;
+
     }
 
     .item-container {
@@ -48,13 +52,5 @@ body {
     .counter {
         font-size: 14px;
     }
-
-    .collectable-item {
-
-        cursor: pointer;
-
-    }
-
-    #gameScreen {}
 
 }
