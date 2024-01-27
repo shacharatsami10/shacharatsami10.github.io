@@ -24,30 +24,45 @@
 
 
     <div class="overlay-container1" id="=Gate1">
-        <a href="./Gates/Gate1.html" target="_blank">
+        <a href="./Gates/Gate1.html">
             <img src="./Imgs/Gate1.png" alt="Overlay Image">
         </a>
     </div>
 
     <div class="overlay-container2" id="=Gate2">
-        <a href="./Gates/Gate2.html" target="_blank">
+        <a href="./Gates/Gate2.html">
             <img src="./Imgs/Gate2.png" alt="Overlay Image">
         </a>
     </div>
 
     <div class="overlay-container3" id="=Gate3">
-        <a href="./Gates/Gate3.html" target="_blank">
+        <a href="./Gates/Gate3.html">
             <img src="./Imgs/Gate3.png" alt="Overlay Image">
         </a>
     </div>
 
     <div class="overlay-container4" id="=Gate4">
-        <a href="./Gates/Gate4.html" target="_blank">
+        <a href="./Gates/Gate4.html">
             <img src="./Imgs/Gate4.png" alt="Overlay Image">
         </a>
     </div>
 
+    <script>
 
+
+        function load() {
+            var ButterflyCollected = sessionStorage.getItem("Butterfly");
+
+            if (ButterflyCollected == "Added") {
+                document.getElementById("Gate2").style.display = "block";
+            }
+            else {
+                document.getElementById("Gate2").style.display = "none";
+            }
+            console.log("Open Gate 2 " + key);
+        }
+
+    </script>
 
 </body>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="StylesGates.css">
+    <link rel="stylesheet" href="StylesGate1.css">
     <title>Fantasy Island</title>
 
 
@@ -40,14 +40,14 @@
     </div>
 
     <div id=CollectibleButterflies>
-        <div class="CollectibleButterfly1">
-            <img src="/CYOA/Imgs/Buttrfly.png" alt="Butterflies" width="100px">
+        <div id="CollectibleButterfly1">
+            <img src="/CYOA/Imgs/Buttrfly.png" alt="Butterflies" width="100px" onclick="GetButtefly1()">
         </div>
-        <div class="CollectibleButterfly2">
-            <img src="/CYOA/Imgs/Buttrfly.png" alt="Butterflies" width="100px">
+        <div id="CollectibleButterfly2">
+            <img src="/CYOA/Imgs/Buttrfly.png" alt="Butterflies" width="100px" onclick="GetButtefly2()">
         </div>
-        <div class="CollectibleButterfly3">
-            <img src="/CYOA/Imgs/Buttrfly.png" alt="Butterflies" width="100px">
+        <div id="CollectibleButterfly3">
+            <img src="/CYOA/Imgs/Buttrfly.png" alt="Butterflies" width="100px" onclick="GetButtefly3()">
         </div>
     </div>
 
@@ -57,8 +57,42 @@
     </div>
 
     <script>
+        let butterfliesCounter = 0;
+        let ButCounter = document.getElementById("butterfliesCounter");
+        let potionsCounter = 0;
+        let PotCounter = document.getElementById("potionsCounter");
+        let lylasFlowersCounter = 0
+        let FlowerCounter = document.getElementById("lylasFlowersCounter");
 
+        function GetButtefly1() {
+            butterfliesCounter++;
+            ButCounter.textContent = butterfliesCounter;
+            document.getElementById("CollectibleButterfly1").style.display = "none";
+            sessionStorage.setItem("Butterfly", "Added");
+            Console.console.log("Butterfly Added");
 
+        }
+
+        function GetButtefly2() {
+            butterfliesCounter++;
+            ButCounter.textContent = butterfliesCounter;
+            document.getElementById("CollectibleButterfly2").style.display = "none";
+            sessionStorage.setItem("Butterfly", "Added");
+            Console.console.log("Butterfly Added");
+        }
+
+        function GetButtefly3() {
+            butterfliesCounter++;
+            ButCounter.textContent = butterfliesCounter;
+            document.getElementById("CollectibleButterfly3").style.display = "none";
+            sessionStorage.setItem("Butterfly", "Added");
+            Console.console.log("Butterfly Added");
+
+        }
+        function resetItems() {
+            butterfliesCounter = 0;
+            ButCounter.textContent = butterfliesCounter;
+        }
 
 
 

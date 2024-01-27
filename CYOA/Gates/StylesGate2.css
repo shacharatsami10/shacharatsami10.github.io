@@ -1,0 +1,22 @@
+body {
+    /* Background*/
+    background-image: url('/CYOA/Imgs/Gate2House.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .overlay-containerTop {
+        /* Set the position to absolute, so it overlays the background */
+        position: absolute;
+
+        /* Set the position and size of the overlay image */
+        top: 15%;
+        left: 47%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+        color: #00ff80;
+        -webkit-text-stroke: 2px black;
+
+    }
+}
