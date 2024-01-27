@@ -10,7 +10,7 @@
 </head>
 
 
-<body>
+<body onload="OpenGate2()">
 
     <div id="audio-player">
         <audio controls id="background-audio">
@@ -23,43 +23,51 @@
     </div>
 
 
-    <div class="overlay-container1" id="=Gate1">
+    <div class="overlay-container1" id="Gate1">
         <a href="./Gates/Gate1.html">
             <img src="./Imgs/Gate1.png" alt="Overlay Image">
         </a>
     </div>
 
-    <div class="overlay-container2" id="=Gate2">
+    <div class="overlay-container2" id="Gate2">
         <a href="./Gates/Gate2.html">
             <img src="./Imgs/Gate2.png" alt="Overlay Image">
         </a>
     </div>
 
-    <div class="overlay-container3" id="=Gate3">
+    <div class="overlay-container3" id="Gate3">
         <a href="./Gates/Gate3.html">
             <img src="./Imgs/Gate3.png" alt="Overlay Image">
         </a>
     </div>
 
-    <div class="overlay-container4" id="=Gate4">
+    <div class="overlay-container4" id="Gate4">
         <a href="./Gates/Gate4.html">
             <img src="./Imgs/Gate4.png" alt="Overlay Image">
         </a>
     </div>
 
+    <button onclick="CheckFinish()">Check Finish</button>
+
     <script>
 
+        function CheckFinish() {
 
-        function load() {
+            var ButterflyCollected = sessionStorage.getItem("Butterfly");
+            ButterflyCollected == "NotCompleted";
+        }
+
+        function OpenGate2() {
+
             var ButterflyCollected = sessionStorage.getItem("Butterfly");
 
-            if (ButterflyCollected == "Added") {
+            if (ButterflyCollected == "Completed") {
                 document.getElementById("Gate2").style.display = "block";
             }
             else {
                 document.getElementById("Gate2").style.display = "none";
             }
-            console.log("Open Gate 2 " + key);
+            console.log("Open Gate 2  and Collected:" + ButterflyCollected + "Butterflies");
         }
 
     </script>
