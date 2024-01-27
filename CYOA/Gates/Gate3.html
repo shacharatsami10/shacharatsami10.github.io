@@ -8,13 +8,97 @@
 </head>
 
 
-<body>
+<body onload="FinishGate3()">
     <div class="overlay-containerTop">
         <h1>
             More
         </h1>
     </div>
 
+
+    <div id="inventory">
+        <h2>Inventory:</h2>
+
+        <div class="item-container" id="butterfliesItem">
+            <img src="/CYOA/Imgs/Buttrfly.png" alt="Butterflies" width="50px">
+            <span class="counter" id="butterfliesCounter">0</span>
+        </div>
+
+        <div class="item-container" id="potionsItem">
+            <img src="/CYOA/Imgs/Potion.png" alt="Potions" width="50px">
+            <span class="counter" id="potionsCounter">0</span>
+        </div>
+
+        <div class="item-container" id="lylasFlowersItem">
+            <img src="/CYOA/Imgs/LylasFlower.png" alt="Lyla's Flowers" width="50px">
+            <span class="counter" id="lylasFlowersCounter">0</span>
+        </div>
+
+    </div>
+
+    <div id=CollectiblePotions>
+        <div id="CollectiblePotion1">
+            <img src="/CYOA/Imgs/Potion.png" alt="Butterflies" width="100px" onclick="GetPotion1()">
+        </div>
+        <div id="CollectiblePotion2">
+            <img src="/CYOA/Imgs/Potion.png" alt="Butterflies" width="100px" onclick="GetPotion2()">
+        </div>
+        <div id="CollectiblePotion3">
+            <img src="/CYOA/Imgs/Potion.png" alt="Butterflies" width="100px" onclick="GetPotion3()">
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div>
+        <button onclick="resetItems()">reset</button>
+    </div>
+
+    <button onclick="FinishGate1()"> give Soren butterflies</button>
+
+    <script>
+        let butterfliesCounter = 0;
+        let ButCounter = document.getElementById("butterfliesCounter");
+        let potionsCounter = 0;
+        let PotCounter = document.getElementById("potionsCounter");
+        let lylasFlowersCounter = 0
+        let FlowerCounter = document.getElementById("lylasFlowersCounter");
+
+        function GetPotion1() {
+            potionsCounter++;
+            PotCounter.textContent = potionsCounter;
+            document.getElementById("CollectiblePotion1").style.display = "none";
+            Console.console.log("Potion Added");
+
+        }
+
+        function GetPotion2() {
+            potionsCounter++;
+            PotCounter.textContent = potionsCounter;
+            document.getElementById("CollectiblePotion2").style.display = "none";
+            Console.console.log("Potion Added");
+        }
+
+        function GetPotion3() {
+            potionsCounter++;
+            PotCounter.textContent = potionsCounter;
+            document.getElementById("CollectiblePotion3").style.display = "none";
+            Console.console.log("Potion Added");
+
+        }
+        function resetItems() {
+            potionsCounter = 0;
+            PotCounter.textContent = potionsCounter;
+        }
+
+        function FinishGate3() {
+            if (potionsCounter == 3) {
+                sessionStorage.setItem("Potion", "Completed");
+                Console.console.log("Potions Completed");
+            }
+
+        }
+
+    </script>
 </body>
 
 </html>

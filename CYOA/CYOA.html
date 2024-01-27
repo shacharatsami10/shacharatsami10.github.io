@@ -10,7 +10,7 @@
 </head>
 
 
-<body onload="OpenGate2()">
+<body onload="OpenGate2(); OpenGate3(); OpenGate4();">
 
     <div id="audio-player">
         <audio controls id="background-audio">
@@ -47,15 +47,7 @@
         </a>
     </div>
 
-    <button onclick="CheckFinish()">Check Finish</button>
-
     <script>
-
-        function CheckFinish() {
-
-            var ButterflyCollected = sessionStorage.getItem("Butterfly");
-            ButterflyCollected == "NotCompleted";
-        }
 
         function OpenGate2() {
 
@@ -68,6 +60,34 @@
                 document.getElementById("Gate2").style.display = "none";
             }
             console.log("Open Gate 2  and Collected:" + ButterflyCollected + "Butterflies");
+        }
+
+        function OpenGate3() {
+
+            var FlowersCollected = sessionStorage.getItem("Flower");
+
+            if (FlowersCollected == "Completed") {
+                document.getElementById("Gate3").style.display = "block";
+            }
+            else {
+                document.getElementById("Gate3").style.display = "none";
+            }
+            console.log("Open Gate 3  and Collected:" + FlowersCollected + "Flowers");
+
+        }
+
+        function OpenGate4() {
+
+            var PotionsCollected = sessionStorage.getItem("Potion");
+
+            if (PotionsCollected == "Completed") {
+                document.getElementById("Gate4").style.display = "block";
+            }
+            else {
+                document.getElementById("Gate4").style.display = "none";
+            }
+            console.log("Open Gate 4  and Collected:" + PotionsCollected + "Potions");
+
         }
 
     </script>

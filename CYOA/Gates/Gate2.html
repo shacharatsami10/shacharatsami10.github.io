@@ -8,13 +8,108 @@
 </head>
 
 
-<body>
+<body onload="FinishGate2()">
     <div class="overlay-containerTop">
         <h1>
             Layla's House
         </h1>
     </div>
 
+
+    <div id="inventory">
+        <h2>Inventory:</h2>
+
+        <div class="item-container" id="butterfliesItem">
+            <img src="/CYOA/Imgs/Buttrfly.png" alt="Butterflies" width="50px">
+            <span class="counter" id="butterfliesCounter">0</span>
+        </div>
+
+        <div class="item-container" id="potionsItem">
+            <img src="/CYOA/Imgs/Potion.png" alt="Potions" width="50px">
+            <span class="counter" id="potionsCounter">0</span>
+        </div>
+
+        <div class="item-container" id="lylasFlowersItem">
+            <img src="/CYOA/Imgs/LylasFlower.png" alt="Lyla's Flowers" width="50px">
+            <span class="counter" id="lylasFlowersCounter">0</span>
+        </div>
+
+    </div>
+
+    <div id=CollectibleFlowers>
+        <div id="CollectibleFlower1">
+            <img src="/CYOA/Imgs/LylasFlower.png" alt="Flowers" width="100px" onclick="GetFlower1()">
+        </div>
+        <div id="CollectibleFlower2">
+            <img src="/CYOA/Imgs/LylasFlower.png" alt="Flowers" width="100px" onclick="GetFlower2()">
+        </div>
+        <div id="CollectibleFlower3">
+            <img src="/CYOA/Imgs/LylasFlower.png" alt="Flowers" width="100px" onclick="GetFlower3()">
+        </div>
+    </div>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <button onclick="FinishGate2()"> give layla flowers</button>
+
+    <script>
+        let butterfliesCounter = 0;
+        let ButCounter = document.getElementById("butterfliesCounter");
+        let potionsCounter = 0;
+        let PotCounter = document.getElementById("potionsCounter");
+        let lylasFlowersCounter = 0
+        let FlowerCounter = document.getElementById("lylasFlowersCounter");
+
+        function GetFlower1() {
+            lylasFlowersCounter++;
+            FlowerCounter.textContent = lylasFlowersCounter;
+            document.getElementById("CollectibleFlower1").style.display = "none";
+            Console.console.log("Butterfly Added");
+
+        }
+
+        function GetFlower2() {
+            lylasFlowersCounter++;
+            FlowerCounter.textContent = lylasFlowersCounter;
+            document.getElementById("CollectibleFlower2").style.display = "none";
+            Console.console.log("Flower Added");
+        }
+
+        function GetFlower3() {
+            lylasFlowersCounter++;
+            FlowerCounter.textContent = lylasFlowersCounter;
+            document.getElementById("CollectibleFlower3").style.display = "none";
+            Console.console.log("Flower Added");
+
+        }
+        function resetItems() {
+            lylasFlowersCounter = 0;
+            FlowerCounter.textContent = lylasFlowersCounter;
+        }
+
+        function FinishGate2() {
+            if (lylasFlowersCounter == 3) {
+                sessionStorage.setItem("Flower", "Completed");
+                Console.console.log("Flower Completed");
+            }
+
+        }
+
+    </script>
 </body>
+
 
 </html>
