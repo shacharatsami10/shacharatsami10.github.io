@@ -15,7 +15,7 @@ body {
         left: 47%;
         transform: translate(-50%, -50%);
         font-size: 60px;
-        color: #00ff80;
+        color: #ff036c;
         -webkit-text-stroke: 2px black;
 
     }
@@ -33,7 +33,7 @@ body {
 
     #inventory h2 {
         margin-bottom: 5px;
-        color: #00ff80;
+        color: #ff036c;
         -webkit-text-stroke: 1px black;
         font-size: 40px;
 
@@ -56,15 +56,15 @@ body {
 
 
     #CollectiblePotion1 {
-        top: 500px;
-        left: 500px;
+        top: 15%;
+        left: 20%;
         cursor: pointer;
         position: absolute;
     }
 
     #CollectiblePotion2 {
-        top: 350px;
-        left: 500px;
+        top: 25%;
+        left: 60%;
         cursor: pointer;
         position: absolute;
 
@@ -72,8 +72,8 @@ body {
     }
 
     #CollectiblePotion3 {
-        top: 200px;
-        left: 500px;
+        top: 60%;
+        left: 20%;
         cursor: pointer;
         position: absolute;
     }
@@ -99,5 +99,39 @@ body {
 
     .visible {
         display: block;
+    }
+
+    #nextButton {
+        display: inline-block;
+        padding: 5px 5px;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #000000;
+        color: #ff036c;
+        border: 2px solid #ff036c;
+        border-radius: 5px;
+        cursor: pointer;
+        top: 75%;
+        left: 0%;
+        position: absolute;
+
+    }
+
+    #GivePotionsLink {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: #000000;
+        border: 2px solid #ff036c;
+        color: #ff036c;
+        cursor: pointer;
+        padding: 5px 5px;
+        border-radius: 10px;
+        top: 78%;
+        left: 10%;
     }
 }

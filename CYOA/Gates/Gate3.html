@@ -48,13 +48,12 @@
         </div>
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div>
-        <button onclick="resetItems()">reset</button>
+
+    <button onclick="resetItems()">reset</button>
     </div>
 
     <dive id="GivePotions">
-        <a href="/CYOA/CYOA.html" onclick="FinishGate3()"> Give Colmer potions</a>
+        <a href="/CYOA/CYOA.html" onclick="FinishGate3()" id="GivePotionsLink"> Give Colmer potions</a>
     </dive>
 
     <div class="dialog-container">
@@ -112,26 +111,26 @@
 
         }
 
-        // Initialize dialog index
+
         let currentDialogIndex = 0;
 
-        // Function to show the next dialog
+
         function showNextDialog() {
             const dialogs = document.querySelectorAll('.dialog');
             if (currentDialogIndex < dialogs.length - 1) {
-                // Hide the current dialog
+
                 dialogs[currentDialogIndex].classList.remove('visible');
-                // Show the next dialog
+
                 currentDialogIndex++;
                 dialogs[currentDialogIndex].classList.add('visible');
             }
         }
 
-        // Show the first dialog initially
+
         const firstDialog = document.querySelector('.dialog');
         firstDialog.classList.add('visible');
 
-        // Add event listener to the next button
+
         document.getElementById('nextButton').addEventListener('click', showNextDialog);
 
     </script>
