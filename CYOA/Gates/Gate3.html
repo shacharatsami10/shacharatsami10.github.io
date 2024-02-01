@@ -53,7 +53,21 @@
         <button onclick="resetItems()">reset</button>
     </div>
 
-    <button onclick="FinishGate3()"> Give Colmer potions</button>
+    <dive id="GivePotions">
+        <a href="/CYOA/CYOA.html" onclick="FinishGate3()"> Give Colmer potions</a>
+    </dive>
+
+    <div class="dialog-container">
+        <p class="dialog visible">Hi Dorothy, how can I help you?</p>
+        <p class="dialog">I was swooped away by a tornado, I'm trying to get back home.</p>
+        <p class="dialog">Oh, I'm sorry to hear that love. I think I can help. If you help me to collect 3 Flowers, I
+            can
+            can show you where Colmer lives. He has the key to the exit gate.</p>
+        <p class="dialog">Great</p>
+
+    </div>
+
+    <button id="nextButton">Next</button>
 
     <script>
         let butterfliesCounter = 0;
@@ -97,6 +111,28 @@
             }
 
         }
+
+        // Initialize dialog index
+        let currentDialogIndex = 0;
+
+        // Function to show the next dialog
+        function showNextDialog() {
+            const dialogs = document.querySelectorAll('.dialog');
+            if (currentDialogIndex < dialogs.length - 1) {
+                // Hide the current dialog
+                dialogs[currentDialogIndex].classList.remove('visible');
+                // Show the next dialog
+                currentDialogIndex++;
+                dialogs[currentDialogIndex].classList.add('visible');
+            }
+        }
+
+        // Show the first dialog initially
+        const firstDialog = document.querySelector('.dialog');
+        firstDialog.classList.add('visible');
+
+        // Add event listener to the next button
+        document.getElementById('nextButton').addEventListener('click', showNextDialog);
 
     </script>
 </body>

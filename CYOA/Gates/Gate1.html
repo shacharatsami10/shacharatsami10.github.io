@@ -52,11 +52,27 @@
     </div>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+    <div id="GiveButterflies">
+        <a href="/CYOA/CYOA.html" onclick="FinishGate1()"> give Soren butterflies</a>
+    </div>
+
     <div>
         <button onclick="resetItems()">reset</button>
     </div>
 
-    <button onclick="FinishGate1()"> give Soren butterflies</button>
+    <div class="dialog-container">
+        <p class="dialog visible">Hi Dorothy, how can I help you?</p>
+        <p class="dialog">I was swooped away by a tornado, I'm trying to get back home.</p>
+        <p class="dialog">Oh, I'm sorry to hear that. I think I can help. If you help me to collect 3 butterflies, I can
+            send you to Layla's house. She'll know how to leave Fantasy Forest.</p>
+        <p class="dialog">Great</p>
+
+    </div>
+
+    <button id="nextButton">Next</button>
 
     <script>
         let butterfliesCounter = 0;
@@ -100,6 +116,29 @@
             }
 
         }
+
+
+        let currentDialogIndex = 0;
+
+
+        function showNextDialog() {
+            const dialogs = document.querySelectorAll('.dialog');
+            if (currentDialogIndex < dialogs.length - 1) {
+
+                dialogs[currentDialogIndex].classList.remove('visible');
+
+                currentDialogIndex++;
+                dialogs[currentDialogIndex].classList.add('visible');
+            }
+        }
+
+
+        const firstDialog = document.querySelector('.dialog');
+        firstDialog.classList.add('visible');
+
+
+        document.getElementById('nextButton').addEventListener('click', showNextDialog);
+
 
     </script>
 

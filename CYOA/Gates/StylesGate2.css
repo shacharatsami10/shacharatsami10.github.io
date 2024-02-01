@@ -1,16 +1,13 @@
 body {
-    /* Background*/
-    background-image: url('/CYOA/Imgs/Gate2House.jpg');
 
+    background-image: url('/CYOA/Imgs/Gate2House.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 
     .overlay-containerTop {
-        /* Set the position to absolute, so it overlays the background */
-        position: absolute;
 
-        /* Set the position and size of the overlay image */
+        position: absolute;
         top: 15%;
         left: 47%;
         transform: translate(-50%, -50%);
@@ -29,7 +26,7 @@ body {
         padding: 10px;
         border-radius: 5px;
         z-index: 999;
-        /* Ensure it's on top of other elements */
+
     }
 
     #inventory h2 {
@@ -77,6 +74,29 @@ body {
         left: 500px;
         cursor: pointer;
         position: absolute;
+    }
+
+    .dialog-container {
+        color: #ffffff;
+        font-size: 35px;
+        display: absolute;
+        height: 125px;
+        width: 100%;
+        border: 5px solid #d022fc;
+        position: absolute;
+        bottom: 0px;
+        background-color: #000000;
+        text-align: center;
+    }
+
+    .dialog {
+        display: none;
+        margin-bottom: 10px;
+
+    }
+
+    .visible {
+        display: block;
     }
 
 }

@@ -63,7 +63,21 @@
     <br>
     <br>
 
-    <button onclick="FinishGate2()"> give layla flowers</button>
+    <div id="GiveFlowers">
+        <a href="/CYOA/CYOA.html" onclick="FinishGate2()"> give layla flowers</a>
+    </div>
+
+    <div class="dialog-container">
+        <p class="dialog visible">Hi Dorothy, how can I help you?</p>
+        <p class="dialog">I was swooped away by a tornado, I'm trying to get back home.</p>
+        <p class="dialog">Oh, I'm sorry to hear that love. I think I can help. If you help me to collect 3 Flowers, I
+            can
+            can show you where Colmer lives. He has the key to the exit gate.</p>
+        <p class="dialog">Great</p>
+
+    </div>
+
+    <button id="nextButton">Next</button>
 
     <script>
         let butterfliesCounter = 0;
@@ -107,6 +121,27 @@
             }
 
         }
+
+        let currentDialogIndex = 0;
+
+
+        function showNextDialog() {
+            const dialogs = document.querySelectorAll('.dialog');
+            if (currentDialogIndex < dialogs.length - 1) {
+
+                dialogs[currentDialogIndex].classList.remove('visible');
+
+                currentDialogIndex++;
+                dialogs[currentDialogIndex].classList.add('visible');
+            }
+        }
+
+
+        const firstDialog = document.querySelector('.dialog');
+        firstDialog.classList.add('visible');
+
+
+        document.getElementById('nextButton').addEventListener('click', showNextDialog);
 
     </script>
 </body>
