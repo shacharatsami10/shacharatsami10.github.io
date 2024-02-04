@@ -5,7 +5,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -18,16 +17,16 @@ body {
         font-size: 40px;
         position: absolute;
         top: 0%;
-        font-size: 50px;
+        font-size: 60px;
     }
 
     #Exercise1 {
         position: absolute;
         text-decoration: none;
-        color: black;
+        color: rgb(0, 0, 0);
         font-size: 30px;
         font-weight: bold;
-        background-color: #000000;
+        background-color: #3c1053ff;
         border: 2px solid #ff036c;
         color: #ff036c;
         cursor: pointer;
@@ -43,7 +42,7 @@ body {
         color: black;
         font-size: 30px;
         font-weight: bold;
-        background-color: #000000;
+        background-color: #3c1053ff;
         border: 2px solid #ff036c;
         color: #ff036c;
         cursor: pointer;
@@ -59,7 +58,7 @@ body {
         color: black;
         font-size: 30px;
         font-weight: bold;
-        background-color: #000000;
+        background-color: #3c1053ff;
         border: 2px solid #ff036c;
         color: #ff036c;
         cursor: pointer;
@@ -75,7 +74,7 @@ body {
         color: black;
         font-size: 30px;
         font-weight: bold;
-        background-color: #000000;
+        background-color: #3c1053ff;
         border: 2px solid #ff036c;
         color: #ff036c;
         cursor: pointer;
