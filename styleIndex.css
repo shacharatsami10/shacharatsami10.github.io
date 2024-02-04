@@ -1,10 +1,11 @@
 body {
 
-    background-image: url('/Imgs/IndexBG2.jpg');
+    background-image: url('./Imgs/IndexBg2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
