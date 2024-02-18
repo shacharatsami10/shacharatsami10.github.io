@@ -82,6 +82,7 @@
 
             if (PotionsCollected == "Completed") {
                 document.getElementById("Gate4").style.display = "block";
+                sessionStorage.setItem("Curiosity", "Added");
             }
             else {
                 document.getElementById("Gate4").style.display = "none";

@@ -71,7 +71,7 @@ body {
 
     #CollectibleFlower3 {
         top: 75%;
-        left: 500px;
+        left: 30%;
         cursor: pointer;
         position: absolute;
     }
@@ -131,6 +131,14 @@ body {
         border-radius: 10px;
         top: 78%;
         left: 10%;
+    }
+
+    .Dorothy {
+        color: #ff036c;
+    }
+
+    .Other {
+        color: #d022fc;
     }
 
 }

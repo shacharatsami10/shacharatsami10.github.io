@@ -62,15 +62,20 @@
     </div>
 
     <div class="dialog-container">
-        <p class="dialog visible">Hi Dorothy, how can I help you?</p>
-        <p class="dialog">I was swooped away by a tornado, I'm trying to get back home.</p>
-        <p class="dialog">Oh, I'm sorry to hear that. I think I can help. If you help me to collect 3 butterflies, I can
+        <p class="dialog visible Other">Hi Dorothy, how can I help you?</p>
+        <p class="dialog Dorothy">I was swooped away by a tornado, I'm trying to get back home.</p>
+        <p class="dialog Other">Oh, I'm sorry to hear that. I think I can help. If you help me to collect 3 butterflies,
+            I can
             send you to Layla's house. She'll know how to leave Fantasy Forest.</p>
-        <p class="dialog">Great</p>
+        <p class="dialog Dorothy">Great</p>
 
     </div>
 
     <button id="nextButton">Next</button>
+
+    <div>
+        <button id="toggleButton" onclick="Minimize()">Minimize</button>
+    </div>
 
     <script>
         let butterfliesCounter = 0;
@@ -136,6 +141,25 @@
 
 
         document.getElementById('nextButton').addEventListener('click', showNextDialog);
+
+        function Minimize() {
+            const dialogBox = document.getElementById('dialog-container');
+            const toggleButton = document.getElementById('toggleButton');
+
+            // Add event listener to toggle button
+            toggleButton.addEventListener('click', () => {
+                // Toggle the 'minimized' class on the dialog box
+                dialogBox.classList.toggle('minimized');
+
+                // Change button text based on dialog state
+                if (dialogBox.classList.contains('minimized')) {
+                    toggleButton.textContent = 'Maximize';
+                } else {
+                    toggleButton.textContent = 'Minimize';
+                }
+            });
+
+        }
 
 
     </script>
