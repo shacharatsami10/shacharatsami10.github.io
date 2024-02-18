@@ -4,6 +4,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    overflow: hidden;
+    margin: 0;
 
     .overlay-containerTop {
 
@@ -89,7 +91,7 @@ body {
         left: 0px;
     }
 
-    .dialog-container.shrunk {
+    .dialog-container:active {
         color: #ffffff;
         font-size: 35px;
         display: absolute;
@@ -112,6 +114,7 @@ body {
     .visible {
         display: block;
     }
+
 
     #nextButton {
         display: inline-block;
@@ -155,24 +158,18 @@ body {
         color: #008a39;
     }
 
-    #toggleButton {
-
-        display: inline-block;
-        padding: 5px 5px;
-        font-size: 50px;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
-        background-color: #000000;
-        color: #ff036c;
-        border: 2px solid #ff036c;
-        border-radius: 5px;
-        cursor: pointer;
-        top: 75%;
-        left: 0%;
+    .DorothySprite {
         position: absolute;
-
-
+        width: 128px;
+        height: 128px;
+        overflow: hidden;
+        background: url('/CYOA/Imgs/Sprites/FantasySprites/Enchantress/Idle.png');
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50);
+        margin: 2em auto;
+        transition: left 4s, top 4s;
+        animation: Walk 1s steps(5) infinite;
     }
 
 }

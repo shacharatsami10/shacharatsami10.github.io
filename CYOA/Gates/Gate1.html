@@ -74,7 +74,7 @@
     <button id="nextButton">Next</button>
 
     <div>
-        <button id="toggleButton" onclick="Minimize()">Minimize</button>
+        <p class="DorothySprite"> </p>
     </div>
 
     <script>
@@ -141,25 +141,6 @@
 
 
         document.getElementById('nextButton').addEventListener('click', showNextDialog);
-
-        function Minimize() {
-            const dialogBox = document.getElementById('dialog-container');
-            const toggleButton = document.getElementById('toggleButton');
-
-            // Add event listener to toggle button
-            toggleButton.addEventListener('click', () => {
-                // Toggle the 'minimized' class on the dialog box
-                dialogBox.classList.toggle('minimized');
-
-                // Change button text based on dialog state
-                if (dialogBox.classList.contains('minimized')) {
-                    toggleButton.textContent = 'Maximize';
-                } else {
-                    toggleButton.textContent = 'Minimize';
-                }
-            });
-
-        }
 
 
     </script>
