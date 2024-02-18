@@ -7,6 +7,29 @@ body {
     overflow: hidden;
     margin: 0;
 
+    #Sprite {
+        position: absolute;
+        width: 50px;
+        height: 72px;
+        overflow: hidden;
+        background: url('/CYOA/Imgs/Sprites/duke_spritesheet.png');
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50);
+        transition: left 4s, top 4s;
+        animation: WalkAnimation 1s steps(10) infinite;
+    }
+
+    @keyframes WalkAnimation {
+        from {
+            background-position: 0;
+        }
+
+        to {
+            background-position: -500px;
+        }
+    }
+
     .overlay-containerTop {
 
         position: absolute;
@@ -158,18 +181,5 @@ body {
         color: #008a39;
     }
 
-    .DorothySprite {
-        position: absolute;
-        width: 128px;
-        height: 128px;
-        overflow: hidden;
-        background: url('/CYOA/Imgs/Sprites/FantasySprites/Enchantress/Idle.png');
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50);
-        margin: 2em auto;
-        transition: left 4s, top 4s;
-        animation: Walk 1s steps(5) infinite;
-    }
 
 }
