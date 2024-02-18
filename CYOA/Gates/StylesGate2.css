@@ -6,6 +6,29 @@ body {
     background-position: center center;
 }
 
+#LennySprite {
+    transform: scaleX(-1);
+    position: absolute;
+    width: 383px;
+    height: 406px;
+    overflow: hidden;
+    bottom: 125px;
+    left: 75%;
+    background: url('/CYOA/Imgs/Sprites/DorothyFinalSpriteSheets/BlueWizardIdle.png');
+    transition: left 4s, top 4s;
+    animation: IdleSoren 1s steps(5) infinite;
+}
+
+@keyframes IdleSoren {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -1915px;
+    }
+}
+
 #DorothySprite {
     position: absolute;
     width: 418px;
@@ -87,21 +110,21 @@ body {
 
 
 #CollectibleFlower1 {
-    bottom: 125px;
-    left: 80%;
+    bottom: 140px;
+    left: 40%;
     cursor: pointer;
     position: absolute;
 }
 
 #CollectibleFlower2 {
-    bottom: 125px;
+    bottom: 140px;
     left: 70%;
     cursor: pointer;
     position: absolute;
 }
 
 #CollectibleFlower3 {
-    bottom: 125px;
+    bottom: 140px;
     left: 30%;
     cursor: pointer;
     position: absolute;
@@ -113,9 +136,10 @@ body {
     display: absolute;
     height: 125px;
     width: 100%;
-    border: 5px solid #d022fc;
+    border: 5px solid #00c3ff;
     position: absolute;
     bottom: 0px;
+    left: 0px;
     background-color: #000000;
     text-align: center;
 }
@@ -126,9 +150,10 @@ body {
     display: absolute;
     height: 10px;
     width: 100%;
-    border: 5px solid #d022fc;
+    border: 5px solid #00c3ff;
     position: absolute;
     bottom: 0px;
+    left: 0px;
     background-color: #000000;
     text-align: center;
     left: 0px;
@@ -183,5 +208,5 @@ body {
 }
 
 .Other {
-    color: #d022fc;
+    color: #00c3ff;
 }

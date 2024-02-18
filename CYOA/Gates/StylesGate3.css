@@ -7,6 +7,29 @@ body {
     background-position: center center;
 }
 
+#ColmerSprite {
+    transform: scaleX(-1);
+    position: absolute;
+    width: 379px;
+    height: 412px;
+    overflow: hidden;
+    bottom: 125px;
+    left: 75%;
+    background: url('/CYOA/Imgs/Sprites/DorothyFinalSpriteSheets/RedWizardIde.png');
+    transition: left 4s, top 4s;
+    animation: IdleSoren 1s steps(5) infinite;
+}
+
+@keyframes IdleSoren {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -1895px;
+    }
+}
+
 #DorothySprite {
     position: absolute;
     width: 418px;
@@ -117,11 +140,27 @@ body {
     display: absolute;
     height: 125px;
     width: 100%;
-    border: 5px solid #055cff;
+    border: 5px solid #ff0000;
     position: absolute;
     bottom: 0px;
+    left: 0px;
     background-color: #000000;
     text-align: center;
+}
+
+.dialog-container:active {
+    color: #ffffff;
+    font-size: 35px;
+    display: absolute;
+    height: 10px;
+    width: 100%;
+    border: 5px solid #ff0000;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: #000000;
+    text-align: center;
+    left: 0px;
 }
 
 .dialog {
@@ -173,5 +212,5 @@ body {
 }
 
 .Other {
-    color: #055cff;
+    color: #ff0000;
 }

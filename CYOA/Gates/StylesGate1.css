@@ -139,9 +139,10 @@ body {
     display: absolute;
     height: 125px;
     width: 100%;
-    border: 5px solid #ff00ff;
+    border: 5px solid #700070;
     position: absolute;
     bottom: 0px;
+    left: 0px;
     background-color: #000000;
     text-align: center;
     left: 0px;
@@ -153,9 +154,10 @@ body {
     display: absolute;
     height: 10px;
     width: 100%;
-    border: 5px solid #ff00ff;
+    border: 5px solid #700070;
     position: absolute;
     bottom: 0px;
+    left: 0px;
     background-color: #000000;
     text-align: center;
     left: 0px;
@@ -211,5 +213,5 @@ body {
 }
 
 .Other {
-    color: #008a39;
+    color: #700070;
 }
