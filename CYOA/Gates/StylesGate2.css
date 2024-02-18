@@ -6,6 +6,29 @@ body {
     background-position: center center;
 }
 
+#DorothySprite {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    overflow: hidden;
+    background: url('/CYOA/Imgs/Sprites/FantasySprites/Enchantress/Idle.png');
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50);
+    transition: left 4s, top 4s;
+    animation: WalkAnimation 1s steps(8) infinite;
+}
+
+@keyframes WalkAnimation {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -1024px;
+    }
+}
+
 .overlay-containerTop {
 
     position: absolute;
@@ -138,6 +161,4 @@ body {
 
 .Other {
     color: #d022fc;
-}
-
 }
