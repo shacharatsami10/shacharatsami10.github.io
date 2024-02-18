@@ -138,6 +138,32 @@
 
         document.getElementById('nextButton').addEventListener('click', showNextDialog);
 
+
+
+        const sprite = document.getElementById('DorothySprite');
+
+        let isWalking = false;
+
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+                isWalking = true;
+                sprite.style.left = '50%'
+                sprite.style.animation = 'WalkingAnimation 1s steps(20) infinite';
+                sprite.style.backgroundImage = "url('/CYOA/Imgs/Sprites/DorothyFinalSpriteSheets/DorothyWalking.png')";
+            }
+        });
+
+
+        document.addEventListener('keyup', (event) => {
+            if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+                isWalking = false;
+                sprite.style.animation = 'IdleAnimation 1s steps(16) infinite';
+                sprite.style.backgroundImage = "url('/CYOA/Imgs/Sprites/DorothyFinalSpriteSheets/DorothyIdle.png')";
+
+            }
+        });
+
     </script>
 </body>
 

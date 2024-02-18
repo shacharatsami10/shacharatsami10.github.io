@@ -8,24 +8,33 @@ body {
 
 #DorothySprite {
     position: absolute;
-    width: 128px;
-    height: 128px;
+    width: 418px;
+    height: 456px;
     overflow: hidden;
-    background: url('/CYOA/Imgs/Sprites/FantasySprites/Enchantress/Idle.png');
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50);
+    bottom: 125px;
+    left: -10%;
+    background: url('/CYOA/Imgs/Sprites/DorothyFinalSpriteSheets/DorothyIdle.png');
     transition: left 4s, top 4s;
-    animation: WalkAnimation 1s steps(8) infinite;
+    animation: IdleAnimation 1s steps(16) infinite;
 }
 
-@keyframes WalkAnimation {
-    from {
+@keyframes IdleAnimation {
+    0% {
         background-position: 0;
     }
 
-    to {
-        background-position: -1024px;
+    100% {
+        background-position: -6688px;
+    }
+}
+
+@keyframes WalkingAnimation {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -8360px;
     }
 }
 
@@ -78,21 +87,21 @@ body {
 
 
 #CollectibleFlower1 {
-    top: 75%;
+    bottom: 125px;
     left: 80%;
     cursor: pointer;
     position: absolute;
 }
 
 #CollectibleFlower2 {
-    top: 75%;
+    bottom: 125px;
     left: 70%;
     cursor: pointer;
     position: absolute;
 }
 
 #CollectibleFlower3 {
-    top: 75%;
+    bottom: 125px;
     left: 30%;
     cursor: pointer;
     position: absolute;
@@ -109,6 +118,20 @@ body {
     bottom: 0px;
     background-color: #000000;
     text-align: center;
+}
+
+.dialog-container:active {
+    color: #ffffff;
+    font-size: 35px;
+    display: absolute;
+    height: 10px;
+    width: 100%;
+    border: 5px solid #d022fc;
+    position: absolute;
+    bottom: 0px;
+    background-color: #000000;
+    text-align: center;
+    left: 0px;
 }
 
 .dialog {

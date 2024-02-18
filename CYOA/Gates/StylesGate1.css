@@ -8,13 +8,36 @@ body {
     margin: 0;
 }
 
+#SorenSprite {
+    transform: scaleX(-1);
+    position: absolute;
+    width: 389px;
+    height: 352px;
+    overflow: hidden;
+    bottom: 125px;
+    left: 75%;
+    background: url('/CYOA/Imgs/Sprites/DorothyFinalSpriteSheets/PurpleWizardIdle.png');
+    transition: left 4s, top 4s;
+    animation: IdleSoren 1s steps(5) infinite;
+}
+
+@keyframes IdleSoren {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -1945px;
+    }
+}
+
 #DorothySprite {
     position: absolute;
     width: 418px;
     height: 456px;
     overflow: hidden;
     bottom: 125px;
-    left: 40%;
+    left: -10%;
     background: url('/CYOA/Imgs/Sprites/DorothyFinalSpriteSheets/DorothyIdle.png');
     transition: left 4s, top 4s;
     animation: IdleAnimation 1s steps(16) infinite;
@@ -32,11 +55,11 @@ body {
 
 @keyframes WalkingAnimation {
     0% {
-        background-position: 0px -100px;
+        background-position: 0;
     }
 
     100% {
-        background-position: -6688px;
+        background-position: -8360px;
     }
 }
 
@@ -116,7 +139,7 @@ body {
     display: absolute;
     height: 125px;
     width: 100%;
-    border: 5px solid #008a39;
+    border: 5px solid #ff00ff;
     position: absolute;
     bottom: 0px;
     background-color: #000000;
@@ -130,7 +153,7 @@ body {
     display: absolute;
     height: 10px;
     width: 100%;
-    border: 5px solid #008a39;
+    border: 5px solid #ff00ff;
     position: absolute;
     bottom: 0px;
     background-color: #000000;
