@@ -84,4 +84,36 @@ body {
         top: 50%;
         left: 60%;
     }
+
+    #QuestionsEX {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: #3c1053ff;
+        border: 2px solid #ff036c;
+        color: #ff036c;
+        cursor: pointer;
+        padding: 5px 5px;
+        border-radius: 10px;
+        top: 50%;
+        left: 60%;
+    }
+
+    #PrincessKaguya {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: #3c1053ff;
+        border: 2px solid #ff036c;
+        color: #ff036c;
+        cursor: pointer;
+        padding: 5px 5px;
+        border-radius: 10px;
+        top: 50%;
+        left: 60%;
+    }
 }
